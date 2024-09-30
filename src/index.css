@@ -1,15 +1,42 @@
-
 .card {
+  position: relative; 
   display: flex;
   justify-content: center;
   align-items: center;
   width: 250px;
   height: 250px;
   margin: 10px;
+  overflow: hidden; 
 }
 
-img{
+.card img {
   width: 250px;
   height: 250px;
   border-radius: 5px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 1; 
+}
+
+.card::before {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: blue; /* Colore di sfondo blu di default */
+  z-index: 2; 
+  transition: background-color 0.3s; /* Transizione fluida per il cambiamento di colore */
+}
+
+/* Classe per le carte indovinate */
+.card.success::before {
+  background-color: transparent; /* Rimuove lo sfondo se indovinato */
+}
+
+/* Classe per le carte sbagliate */
+.card.incorrect::before {
+  background-color: blue; /* Mantiene il colore blu se sbagliato */
 }

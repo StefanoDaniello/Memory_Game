@@ -12,6 +12,7 @@ function MainComp() {
               id={item.id}
               img={item.img}
               code={item.code}
+              success={item.success}
             ></CardComp>
           </div>
         ))}
