@@ -26,17 +26,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: blue; /* Colore di sfondo blu di default */
+  background-color: blue; 
   z-index: 2; 
-  transition: background-color 0.3s; /* Transizione fluida per il cambiamento di colore */
+  transition: background-color 0.3s; 
 }
 
 /* Classe per le carte indovinate */
 .card.success::before {
-  background-color: transparent; /* Rimuove lo sfondo se indovinato */
+  background-color: transparent; 
 }
 
 /* Classe per le carte sbagliate */
 .card.incorrect::before {
-  background-color: blue; /* Mantiene il colore blu se sbagliato */
+  background-color: blue; 
 }

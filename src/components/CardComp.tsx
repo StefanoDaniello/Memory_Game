@@ -5,9 +5,8 @@ function CardComp(children: Card) {
     const { handleProva } = useContextApp();
 
     return (
-        // backColor
         <div 
-            className={`card ${children.success ? 'success' : 'incorrect'}`} // Aggiungi 'success' se l'immagine è stata indovinata, altrimenti 'incorrect'
+            className={`card ${children.success ? 'success' : 'incorrect'}`} 
             onClick={() => handleProva(children)} // Passa l'oggetto children al gestore di clic
         >
             <img src={children.img} alt={`Card ${children.id}`} />
