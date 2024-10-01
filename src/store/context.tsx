@@ -74,11 +74,6 @@ const handleProva = (item: Card) => {
 // Assicurati di dichiarare il nuovo stato nel tuo componente
 const [isChecking, setIsChecking] = useState(false);
 
-    
-    
-    
-    
-    
 
     useEffect(()=>{
         console.log(cardList)    
